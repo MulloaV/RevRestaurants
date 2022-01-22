@@ -73,3 +73,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+#Custom Gems
+gem "faker"
+gem 'simple_form'
+gem 'nested_scaffold'

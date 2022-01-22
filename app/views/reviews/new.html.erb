@@ -1,0 +1,8 @@
+ <h2> Agregar un comentario del restaurant <%= @restaurant.name %> </h2>
+
+ <%= simple_form_for [@restaurant, @review] do |form|  %>
+
+    <%= form.input :content, label: 'Deja tu comentario'  %>
+    <%= form.submit %>
+
+<% end %>
