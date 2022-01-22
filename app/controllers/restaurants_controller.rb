@@ -42,7 +42,10 @@ class RestaurantsController < ApplicationController
   # DELETE /restaurants/1 or /restaurants/1.json
   def destroy
     @restaurant.destroy
-    redirect_to restaurants_url, notice: 'Restaurant was successfully destroyed.'
+    
+    respond_to do |format|
+      format.html { redirect_to restaurants_url, status: :see_other, notice: 'Restaurant was successfully destroyed.' }
+    end
   end
 
   def top

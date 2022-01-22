@@ -15,7 +15,7 @@
     <td><%= review.restaurant %></td>
     <td><%= link_to 'Show', [review.restaurant, review] %></td>
     <td><%= link_to 'Edit', edit_restaurant_review_path(review.restaurant, review) %></td>
-    <td><%= link_to 'Destroy', [review.restaurant, review], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', [review.restaurant, review],  data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

@@ -5,8 +5,8 @@
 <table class='table'>
   <thead>
     <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Address</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Dirección</th>
       <th scope="col">Rating</th>
       <th scope="col">Chef</th>
       <th colspan="4"></th>
@@ -20,9 +20,9 @@
         <td><%= restaurant.address %></td>
         <td><%= restaurant.rating %></td>
         <td><%= restaurant.chef_name %></td>
-        <td><%= link_to 'Show', restaurant %></td>
-        <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
-        <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', restaurant %></td>
+        <td><%= link_to 'Editar', edit_restaurant_path(restaurant) %></td>
+        <td><%= link_to 'Eliminar', restaurant, data: {turbo_method: :delete, turbo_confirm: 'Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -23,9 +23,9 @@
 
   <strong>Review:</strong> <small> <%= link_to 'Deja tu comentario', new_restaurant_review_path(@restaurant) %></small>
   <% @restaurant.reviews.each do |review| %>
-    <p><%= review.content %> <small> <%= link_to 'Eliminar', review_path(review), method: :delete, data: {confirm: 'Estás seguro?'} %> </small></p>
+    <p><%= review.content %> <small> <%= link_to 'Eliminar', review_path(review),  data: {turbo_method: :delete, turbo_confirm: 'Estás seguro?'} %> </small></p>
   <% end  %>
 
 
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
-<%= link_to 'Back', restaurants_path %>
+<%= link_to 'Editar', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Volver', restaurants_path %>
